@@ -41,7 +41,7 @@ nut.plant <- data.frame(nut.plant)
 nut.plant[is.na(nut.plant)] <- 0
 nut.plant$id <- paste(nut.plant$site_code, nut.plant$plot, sep = "_")
 nut.plant <- nut.plant[nut.plant$id %in% nut.env$env.id, ]
-# bacteria
+# bacteria 
 rownames(nut.bac) <- nut.bac$OUT_ID
 nut.bac <- nut.bac[names(nut.bac) != "OUT_ID" & names(nut.bac) != "taxonomy"]
 nut.bac <- t(nut.bac)
